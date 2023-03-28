@@ -3,10 +3,15 @@ from tarantino_framework.templator import render
 
 class Index:
 
-    def __call__(self):
+    def __call__(self, request):
         return '200 OK', render('index.html')
 
 class About:
 
-    def __call__(self):
-        return '200 OK', 'about'
+    def __call__(self, request):
+        return '200 OK', render('about.html')
+
+class Author:
+
+    def __call__(self, request):
+        return '200 OK', render('author.html')
